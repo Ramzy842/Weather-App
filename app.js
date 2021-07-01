@@ -11,7 +11,7 @@ const celcius = document.querySelector(".celcius");
 navigator.geolocation.getCurrentPosition((position)=>{
     let lat = position.coords.latitude;
     let long =  position.coords.longitude;
-    fetch(`http://api.weatherapi.com/v1/current.json?key=4e3c13ae1d9a43d8be5180345210107&q=${lat}, ${long}`, {mode: "cors"})
+    fetch(`https://api.weatherapi.com/v1/current.json?key=4e3c13ae1d9a43d8be5180345210107&q=${lat}, ${long}`, {mode: "cors"})
     .then(res=>{
         return res.json()
     }).then(data=>{
@@ -30,7 +30,7 @@ let h2 = document.createElement("h2");
 
 form.addEventListener("submit", e=>{
     e.preventDefault();
-    fetch(`http://api.weatherapi.com/v1/current.json?key=4e3c13ae1d9a43d8be5180345210107&q=${input.value}`, {mode: "cors"})
+    fetch(`https://api.weatherapi.com/v1/current.json?key=4e3c13ae1d9a43d8be5180345210107&q=${input.value}`, {mode: "cors"})
     .then(res=>{
         return res.json()
     }).then(data=>{
