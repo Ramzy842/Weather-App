@@ -61,7 +61,8 @@
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 0;
+    z-index: -1;
+    min-height: 100%;
 }
 
 main{
@@ -70,6 +71,7 @@ main{
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    position: relative;
 }
 
 .city-card{
