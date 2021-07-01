@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.container{
+    height: 100vh;
+    background-image: url('/image/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.form{
+    background: rgb(209, 209, 209);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.search{
+    background: rgb(209, 209, 209);
+    border: 3px solid;
+}
+
+.search, .form button{
+    padding: 0.2rem 1rem;
+    font-size: 1.5rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.form button{
+    cursor: pointer;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background: rgb(20, 67, 220);
+}
+
+
+.form button:hover{
+   background: rgb(18, 48, 146);
+}
+
+.overlay{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+main{
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.city-card{
+    overflow: hidden;
+    color: white;
+    height: 40vh;
+    background: rgb(25, 26, 87);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.location{
+    font-size: 2rem;
+}
+
+.degree{
+    font-size: 2rem;
+}
+
+.switchDegree{
+
+    border: 2px solid;
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-evenly;
+}
+
+.fahrenheit, .celcius{
+    cursor: pointer;
+    padding: 0.2rem 5rem;
+}
+.fahrenheit{
+    background: rgb(250, 22, 68);
+}
+.celcius{
+    background: rgb(2, 141, 255);
+}
+
+
+.fahrenheit:hover{
+    background: rgb(158, 10, 40);
+}
+.celcius:hover{
+    background: rgb(7, 86, 151);
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 479px) {
+    .container{
+        max-width: 100vw;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    main{
+        padding: 0 1rem;
+    }
+
+    .form{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 20vh;
+    }
+
+    .search, .form button{
+        padding: 0.2rem 1rem;
+        font-size: 1.2rem;
+        height: 2rem;
+        margin: 0;
+    }
+    
+
+    .city-card{
+        padding: 1rem 2rem;
+    }
+
+    .location{
+        font-size: 1.4rem;
+    }
+    
+    .degree{
+        font-size: 1.2rem;
+    }
+    
+    .switchDegree{
+        border: 2px solid;
+        display: flex;
+        font-size: 1rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
